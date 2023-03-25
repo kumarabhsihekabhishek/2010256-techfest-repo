@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
+  <link rel="stylesheet" href="techfest.css">
+</head>
+
+<body>
+  <header>
+    <div class="left">
+      <img id="logo" src="download.jpg" alt="Error" height="132" width="132">
+      <h2>Sant Longowal Institute of Engineering and Technology</h2>
+
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">The Institute</button>
+          <div class="dropdown-content">
+            <a href="#">Vision & Mission</a>
+            <a href="#">About Institute</a>
+            <a href="#">Organisation Chart</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Academics</button>
+          <div class="dropdown-content">
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Admistration</button>
+          <div class="dropdown-content">
+            <a href="#">Admistrators</a>
+            <a href="#">Academic</a>
+            <a href="#">Admistration</a>
+            <a href="#">Cell & Socities</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Departments</button>
+          <div class="dropdown-content">
+            <a href="#">Computer Science And Engineering</a>
+            <a href="#">Chemical Engineering</a>
+            <a href="#">Civil Engineering</a>
+            <a href="#">Electronics and Communication Engineering</a>
+            <a href="#">Electrical and instrumantation Engineering</a>
+            <a href="#">Food Engineering And Technology</a>
+            <a href="#">Mechanical Engineering</a>
+            <a href="#">Chemistry</a>
+            <a href="#">Physics</a>
+            <a href="#">Mathematics</a>
+            <a href="#">Management & Humanities</a>
+            <a href="#">Disabilities Studies</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Faclities</button>
+          <div class="dropdown-content">
+            <a href="#">A.C.S.S</a>
+            <a href="#">Central Library</a>
+            <a href="#">Workshop</a>
+            <a href="#">Hostels</a>
+            <a href="#">Estate office</a>
+            <a href="#">Health Centre</a>
+            <a href="#">Sports</a>
+            <a href="#">Inovation Cell</a>
+            <a href="#">Central of Excellence</a>
+            <a href="#">Guest House</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Placements</button>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Student Zone</button>
+          <div class="dropdown-content">
+            <a href="#">Technical Club</a>
+            <a href="#">Social</a>
+            <a href="#">Sports</a>
+            <a href="#">Literary</a>
+            <a href="#">Cultural</a>
+            <a href="#">Conselling</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Admission</button>
+        </div>
+
+
+        <div class="search">
+          <input type="text" name="search" id="search" placeholder="search this website">
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  </head>
+
+  <body>
+
+    <div class="slideshow-container">
+      <div>
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img
+            src="agricuture.jpg"
+            style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img
+            src="agriculture-jobs.jpg"
+            style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img
+            src="https://plus.unsplash.com/premium_photo-1664478222761-0649c010048f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+            style="width:100%">
+          <div class="text">Caption Three</div>
+
+
+        </div>
+
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <div class="aboutus">
+        Agriculture refers to the practice of cultivating land, raising animals, and producing food, fiber, and other
+        products to sustain human life. It is a vital industry that has been around for thousands of years and is
+        essential for feeding the world's population.
+
+        Agriculture includes a wide range of activities such as crop production, livestock farming, fisheries, forestry,
+        and agribusiness. Farmers use various techniques and technologies to improve their yields, reduce their costs,
+        and manage their resources sustainably.
+
+        There are many challenges facing the agriculture industry, including climate change, soil degradation, water
+        scarcity, and the need to produce more food for a growing global population. To address these challenges,
+        farmers and agricultural researchers are working on developing new technologies and techniques to increase
+        efficiency, reduce waste, and protect the environment.
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+  </body>
+
+  <div class="class">
+    <div id="img1">
+      <img
+        src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        alt="Error" height="450" width="500">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, sint et. Corporis quidem nesciunt placeat
+        corrupti ex eaque. Possimus, nulla ducimus. Adipisci, tempore ut. Aliquid ducimus aspernatur incidunt labore
+        quibusdam</p>
+    </div>
+
+    <div id="img2">
+      <img
+        src="https://images.unsplash.com/photo-1483871788521-4f224a86e166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
+        alt="" height="450" width="500">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex aut soluta sequi necessitatibus autem
+        ullam expedita sapiente, optio minus!</p>
+    </div>
+
+    <div id="img3">
+      <img
+        src="https://images.unsplash.com/photo-1527847263472-aa5338d178b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+        alt="" height="450" width="500">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde praesentium temporibus repellendus sunt
+        distinctio quis quidem libero veniam, laboriosam hic repudiandae natus labore aliquam harum magni expedita
+        perferendis, possimus explicabo vel! Aliquid voluptas laborum quam reprehenderit tempore, cum cumque nisi?</p>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>Points About Innovation In Agriculture</h2>
+  </div>
+  <ul>
+    <li><b>Technological advancements:</b>Innovation in agriculture has been driven by the rapid advancements in
+      technology, including precision agriculture, biotechnology, genetic engineering, drones, and artificial
+      intelligence.</li><br>
+    <li><b>Sustainability:</b>The focus on sustainable agriculture has increased the need for innovation in areas such
+      as water and energy efficiency, soil health, and pest and disease control.</li><br>
+    <li><b>Increased food production:</b>Innovations in agriculture have enabled farmers to produce more food on less
+      land, using fewer resources. This is important to meet the growing demand for food due to population growth.</li>
+    <br>
+    <li><b>Improved food quality:</b> Innovations in agriculture have led to improvements in the quality of food
+      produced, such as the use of precision agriculture to optimize crop yields and reduce waste.</li><br>
+    <li><b>Access to markets:</b> Innovation in agriculture has enabled farmers to access new markets through
+      e-commerce, online marketplaces, and other digital platforms.</li><br>
+    <li><b>Resilience to climate change:</b> Innovation in agriculture can help farmers adapt to climate change by
+      developing new crops that are more resistant to drought, heat, and other extreme weather events.</li><br>
+    <li><b>Collaboration and partnerships:</b> Collaboration and partnerships between farmers, researchers, and the
+      private sector are critical to driving innovation in agriculture. This can involve sharing knowledge, resources,
+      and expertise to develop new technologies and practices.</li><br>
+    <li><b>Government support:</b> Governments can play a key role in supporting innovation in agriculture through
+      policies and funding for research and development, as well as infrastructure and market access.</li><br>
+  </ul>
+  <footer>
+    <div class="footer-container">
+      <p>Sant Longowal Institute of Engineering and Technology</p>
+      <ul>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+</html>
+</body>
